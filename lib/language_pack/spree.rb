@@ -63,7 +63,7 @@ MAILER
     run_command "bundle exec rails g spree:install --auto-accept --user_class=Spree::User --enforce_available_locales=true --migrate=false --sample=false --seed=false --copy_storefront=false"
     run_command "bundle exec rails g spree:auth:install --migrate=false"
     run_command "bundle exec rails g spree_gateway:install --migrate=false"
-    run_command "bundle exec rails g spree_multi_vendor:install"
+    run_command "bundle exec rails g spree_multi_vendor:install --migrate=false"
     super
   end
 
