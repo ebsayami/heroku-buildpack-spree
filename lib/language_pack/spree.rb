@@ -24,6 +24,7 @@ gem 'spree', :path => '.'
 gem 'spree_auth_devise', '~> 4.1.0.rc1'
 gem 'spree_gateway', '~> 3.7'
 gem 'sidekiq'
+gem 'spree_multi_vendor', github: 'spree-contrib/spree_multi_vendor'
       GEMFILE
     end
 
@@ -62,6 +63,7 @@ MAILER
     run_command "bundle exec rails g spree:install --auto-accept --user_class=Spree::User --enforce_available_locales=true --migrate=false --sample=false --seed=false --copy_storefront=false"
     run_command "bundle exec rails g spree:auth:install --migrate=false"
     run_command "bundle exec rails g spree_gateway:install --migrate=false"
+    run_command "bundle exec rails g spree_multi_vendor:install"
     super
   end
 
